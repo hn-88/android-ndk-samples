@@ -22,4 +22,9 @@ jobs:
     - name: build samples
       run: |
         ./gradlew build
-
+        
+    - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: samples-build-dirs
+          path: ./**/build/**
